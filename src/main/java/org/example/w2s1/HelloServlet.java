@@ -1,7 +1,6 @@
-package org.example.webapplication;
+package org.example.w2s1;
 
 import java.io.*;
-
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
