@@ -1,4 +1,4 @@
-package org.example.webapplication;
+package org.example.w4s1sessoncookies;
 
 import java.io.*;
 
