@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>webapplication</artifactId>
+    <artifactId>w4s2-music-registry</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>webapplication</name>
+    <name>w4s2-music-registry</name>
     <packaging>war</packaging>
 
     <properties>
@@ -39,6 +39,7 @@
     </dependencies>
 
     <build>
+        <finalName>music-registration</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
