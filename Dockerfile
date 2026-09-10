@@ -1,7 +1,3 @@
-LABEL authors="LeFat"
-
-ENTRYPOINT ["top", "-b"]
-
 # ---------- Stage 1: Build WAR bằng Maven ----------
 FROM maven:3.9-eclipse-temurin-17 AS build
 
