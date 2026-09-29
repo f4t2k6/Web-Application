@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.0"
+             xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+                 https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+
+    <!-- RESOURCE_LOCAL: tự tạo và quản lý EntityManager (bắt buộc khi dùng Tomcat) -->
+    <persistence-unit name="surveyPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+        <!-- Liệt kê rõ entity để EclipseLink chắc chắn tìm thấy -->
+        <class>model.User</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+
+            <!-- url / user / password KHÔNG viết ở đây, được nạp từ biến môi trường trong DBUtil.java -->
+
+            <!-- Bảng do file sql/schema.sql tạo, JPA không tự tạo -->
+            <property name="jakarta.persistence.schema-generation.database.action" value="none"/>
+
+            <!-- Để "FINE" nếu muốn xem câu SQL mà JPA sinh ra khi debug -->
+            <property name="eclipselink.logging.level" value="INFO"/>
+        </properties>
+    </persistence-unit>
+</persistence>
